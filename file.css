@@ -1,0 +1,433 @@
+body {
+    margin: 0px;
+}
+
+p {
+    color: grey;
+}
+
+/* laptops, tablets and desktops */
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        display: none;
+    }
+
+    .left {
+        width: 20%;
+        margin: 20px;
+    }
+
+    .right {
+        width: 80%;
+        margin: 20px;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        /* border-bottom: 1px solid grey; */
+    }
+
+    .hr-0 {
+        /* max-width: 50%; */
+        margin-left: 0px;
+        margin-top: -21px;
+
+    }
+
+    .tabs>p {
+        margin: 20px 5px;
+        /* align-content: space-around; */
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .title-box {
+        display: flex;
+        width: 90%;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: space-between;
+    }
+
+    .title-box button {
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    #img {
+        width: 200px;
+        height: 200px;
+        /* border: 1px solid black; */
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .name {
+        margin-top: -20px;
+    }
+
+    #repo {
+        border-bottom: 2px solid red;
+    }
+
+    .input {
+        /* width: 90%; */
+        height: 40px;
+        /* border-bottom: 1px solid black; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #search {
+        width: 90%;
+        height: 30px;
+        padding: 12px 20px
+    }
+
+    .result p {
+        /* font-weight: bold; */
+        /* padding: 0px 10px; */
+        margin-top: -1px;
+
+    }
+
+    .hr-1 {
+        max-width: 22%;
+        margin-left: 0px;
+        margin-top: -10px;
+    }
+
+    .repos .left {
+        /* border: 1px solid grey; */
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30%;
+        /* border: 1px solid grey; */
+    }
+
+    #title {
+        font-size: 20px;
+        color: #0066cc;
+    }
+
+    .lang {
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid grey; */
+    }
+
+    .lang>p {
+        font-size: 15px;
+        padding: 0px 5px;
+    }
+
+    .container-form {
+        width: 400px;
+        height: 400px;
+        border: 1px solid grey;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        /* box-shadow: 10px 5px 20px grey; */
+        background-color: #fff;
+    }
+
+    .container-form h3 {
+        text-align: center;
+        font-size: 40px;
+
+    }
+
+    .container-form form {
+        /* border: 1px solid grey; */
+        width: 250px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+    }
+
+    .container-form form input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+
+    }
+
+    .container-form form input[type=button] {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 14px 14px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .container-form form input[type=button]:hover {
+        background-color: grey;
+        transition: 0.2s;
+    }
+
+    #error {
+        color: brown;
+    }
+
+    .color {
+        /* border: 1px solid gray; */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: 17px;
+    }
+
+    .star-container, .fork-container {
+        display: flex;
+    }
+
+    .far, .fas {
+        margin-top: 18px;
+        font-size: smaller;
+        color: grey;
+        padding-right: 5px;
+    }
+
+    .repo-title {
+        font-size: 20px;
+        color: #0066cc;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 992px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tabs p {
+        font-size: 13px;
+        margin: 20px 2px;
+        align-content: space-evenly;
+        font-weight: bold;
+        border-bottom: 1px solid grey;
+    }
+
+    .desc {
+        text-align: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #img {
+        width: 200px;
+        height: 200px;
+        /* border: 1px solid black; */
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .name {
+        margin-top: -20px;
+    }
+
+    #repo {
+        border-bottom: 2px solid brown;
+    }
+
+    .input {
+        width: 90%;
+        height: 30px;
+        /* border-bottom: 1px solid black; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .result p {
+        /* font-weight: bold; */
+        padding: 0px 10px;
+        margin-top: -1px;
+
+    }
+
+    .hr-1 {
+        max-width: 50%;
+        margin-left: 10px;
+        margin-top: -10px;
+        
+    }
+
+    .hr-0 {
+        display: none;
+    }
+
+    .repos .left {
+        /* border: 1px solid grey; */
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        /* border: 1px solid grey; */
+    }
+
+    #title {
+        font-size: 20px;
+        color: #0066cc;
+    }
+
+    .lang {
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid grey; */
+    }
+
+    .lang>p {
+        font-size: 15px;
+        padding: 0px 5px;
+    }
+
+    .container-form {
+        width: 80%;
+        height: 400px;
+        border: 1px solid grey;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 110px;
+        /* box-shadow: 10px 5px 20px grey; */
+        background-color: #fff;
+    }
+
+    .container-form h3 {
+        text-align: center;
+        font-size: 40px;
+
+    }
+
+    .container-form form {
+        /* border: 1px solid grey; */
+        width: 90%;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+    }
+
+    .container-form form input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+
+    }
+
+    .container-form form input[type=button] {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 14px 0px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .container-form form input[type=button]:hover {
+        background-color: grey;
+        transition: 0.2s;
+    }
+
+    #error {
+        color: brown;
+    }
+
+    .color {
+        /* border: 1px solid gray; */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: 17px;
+    }
+
+    .star-container,
+    .fork-container {
+        display: flex;
+    }
+
+    .far,
+    .fas {
+        margin-top: 18px;
+        font-size: smaller;
+        color: grey;
+        padding-right: 5px;
+    }
+
+    .repo-title {
+        font-size: 20px;
+        color: #0066cc;
+        padding-left: 10px;
+    }
+
+    .title-box {
+        display: flex;
+        width: 90%;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: space-between;
+    }
+
+    .title-box button {
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    .input {
+        /* width: 90%; */
+        height: 40px;
+        /* border-bottom: 1px solid black; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #search {
+        width: 98%;
+        height: 30px;
+        padding: 12px 20px
+    }
+}
