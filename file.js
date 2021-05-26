@@ -1,5 +1,5 @@
 const config = {
-  token: "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",
+  token: "YOUR_GITHUB_TOKEN",
   url: "https://api.github.com/graphql",
 };
 const form = document.getElementById("form");
