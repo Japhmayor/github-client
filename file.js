@@ -1,3 +1,7 @@
+const config = {
+  token: "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",
+  url: "https://api.github.com/graphql",
+};
 const form = document.getElementById("form");
 const main = document.getElementById("container");
 
@@ -41,8 +45,8 @@ function relocate() {
     },
   };
   // const params = { username: "unicodeveloper" };
-  const url = "https://api.github.com/graphql";
-  const token = "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";
+  const url = config.url;
+  const token = config.token;
   const options = {
     method: "POST",
     headers: {
