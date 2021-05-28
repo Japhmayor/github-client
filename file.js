@@ -1,5 +1,5 @@
 const config = {
-  token: "YOUR_GITHUB_TOKEN",
+  token: "YOUR_TOKEN",
   url: "https://api.github.com/graphql",
 };
 const form = document.getElementById("form");
@@ -97,6 +97,7 @@ function relocate() {
       // star button
       const starButton = document.createElement("button");
       starButton.innerHTML = "star";
+      starButton.className = "far fa-star";
       titleButtonCon.appendChild(starButton);
       // const starInButton = document.createElement("i");
       // starButton.appendChild(starInButton);
