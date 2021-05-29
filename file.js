@@ -1,18 +1,64 @@
 const config = {
-  token: "YOUR_TOKEN",
+  token: "Your_Token",
   url: "https://api.github.com/graphql",
 };
 const form = document.getElementById("form");
 const main = document.getElementById("container");
+const loader = document.getElementById("loading");
+const errorr = document.getElementById("errorr");
+const errorCon = document.getElementById("error-con");
+const retryBtn = document.createElement("button");
+
+// showing loading
+function displayLoading() {
+  loader.style.color = "black";
+  loader.innerHTML = "loading...";
+  loader.style.display = "block";
+}
+
+// retry button when there is an error
+function retry(parent) {
+  retryBtn.innerHTML = "Retry";
+  retryBtn.style.display = "block";
+  retryBtn.className = "retryBtn";
+  parent.appendChild(retryBtn);
+  retryBtn.addEventListener("click", () => {
+    location.reload();
+  });
+}
+
+// showing error
+function displayError() {
+  errorr.innerHTML =
+    "An error ocurred. Either your internet is disconnected or your username is incorrect";
+  errorr.style.display = "block";
+  retry(errorCon);
+}
+
+function hideError() {
+  errorr.style.display = "none";
+  retryBtn.style.display = "none";
+}
+
+function displayMain() {
+  main.style.display = "flex";
+}
+
+//  hide loading
+function hideLoading() {
+  loader.style.display = "none";
+}
 
 function relocate() {
+  displayLoading();
   var username = document.getElementById("username").value;
 
   if (username == "") {
+    hideLoading();
+    hideError();
     document.getElementById("error").innerHTML = "*Enter your github username";
   } else {
     form.style.display = "none";
-    main.style.display = "flex";
     console.log(username);
   }
   // query($username: String="japhmayor"){
@@ -57,18 +103,11 @@ function relocate() {
   };
 
   var githubData;
-  // (async () => {
-  //   const response = await fetch(url, options);
-  //   const json = await response.json();
-  //   githubData = json;
-  //   console.log(json);
-  // })();
+
   fetch(url, options)
     .then((response) => {
       if (response.ok) {
         return response.json();
-      } else {
-        throw new Error("Network response error");
       }
     })
     .then((response) => (githubData = response.data))
@@ -79,6 +118,14 @@ function relocate() {
       displayName(data.user.name);
       getLength(data.user.repositories.nodes.length);
       displayImage(data.user.avatarUrl);
+      hideLoading();
+      displayMain();
+    })
+    .catch((error) => {
+      console.log(error);
+      console.log("error");
+      hideLoading();
+      displayError();
     });
 
   function displayInfo(data) {
